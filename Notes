@@ -1,0 +1,34 @@
+clone https://github.com/irdvo/ffl
+
+in gforth 
+fpath .fpath
+. /usr/local/Cellar/gforth/0.7.3_2/lib/gforth/site-forth /usr/local/Cellar/gforth/0.7.3_2/share/gforth/site-forth 
+/usr/local/Cellar/g
+
+copy ffl subdirectory to directory ending .../site-forth
+
+in gforth run:
+REQUIRE ffl/tst.fs
+
+add REQUIRE ffl/tst.fs to top of test file
+
+Test the test:
+2 2 + 4 ?S  ok
+2 2 + 5 ?S stack contents mismatch: 2 2 + 5 ?S
+  expecting 5 and found 4
+ ok
+
+ Workflow
+
+ add tests to test fiole
+ end test file with BYE
+
+ Run tests with gfortth <test-file-name> in terminal 
+ Simple file watcher for simple automation -
+  fswatch . | (while read; do gforth test.fs; done)
+
+ Tried DBG statements and gforth-itc test.fs
+  
+  3rd September
+
+  
