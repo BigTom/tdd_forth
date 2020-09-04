@@ -23,7 +23,7 @@ For each test case output one integer: the score made given the test case rolls.
 ### Input
 
     3
-    3
+    2
     4 6
     4
     10 3 7 5
